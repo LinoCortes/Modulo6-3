@@ -12,6 +12,7 @@
       <http auto-config="true">
         	<intercept-url pattern="/" access="permitAll"/>
         	<intercept-url pattern="/listar-capacitaciones" access="hasAnyAuthority('ADMIN')"/>
+        	<intercept-url pattern="/listar-capacitaciones" access="hasAnyAuthority('USER')"/>
        </http>
 
         <authentication-manager>
@@ -19,6 +20,7 @@
         		<password-encoder hash="bcrypt"/>
         		<user-service>
         			<user name="grupo7" authorities="ADMIN" password="$2a$10$br285zcBWkWzay7AB9FVveywJxBWXyCmcYnAnYciSuuxiy/0PtNbG"/>
+        			<user name="pex" authorities="USER" password="$2a$10$uBbgqfcKrxYvtJWhxV1IM.c9i.jjBZl6k2YYmrOyngtfy3X.lY4nq"/>
         		</user-service>
         	</authentication-provider>
         </authentication-manager>
