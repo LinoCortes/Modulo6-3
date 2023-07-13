@@ -22,7 +22,7 @@ public class CapacitacionController {
 	@Autowired
 	CapacitacionService capacitacionService;
 	
-    @RequestMapping(path = "/", method = RequestMethod.GET)
+    @RequestMapping(path = "/listar-capacitaciones", method = RequestMethod.GET)
     public ModelAndView mostrarListarCapacitaciones() {
         return new ModelAndView("listar-capacitaciones", "capacitaciones", capacitacionService.getAll());
     }
