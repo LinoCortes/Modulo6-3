@@ -38,15 +38,22 @@
 		<div class="col-xs-12 col-sm-12 col-md-4 mx-auto">
 			<div class="card bg-dark text-white" style="border-radius: 1rem;">
 				<div class="card-body p-5">
-					<form class="fondo-form" action="listar-capacitaciones" method="post">
+				<%
+				String error = (String) request.getAttribute("error");
+				if (error != null && error.equals("true")){
+					out.println("<h3 class= 'alert alert-danger'> Error de Autenticacion</h3>");
+				}
+				%>
+								
+					<form name= "loginForm" class="form" action="${pageContext.request.contextPath}/login" method="post">
 						<div class="mb-3">
-							<label for="exampleInputEmail1" class="form-label">Usuario</label>
+							<label for="username" class="form-label">Usuario</label>
 							<input type="text" class="form-control" id="exampleInputEmail1"
-								name="username" required />
+								name="username" value="" />
 						</div>
 
 						<div class="mb-3">
-							<label for="exampleInputPassword1" class="form-label">contraseña</label>
+							<label for="password" class="form">contraseña</label>
 							<input type="password" class="form-control"
 								id="exampleInputPassword1" name="password" required />
 

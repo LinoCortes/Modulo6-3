@@ -8,12 +8,6 @@ import org.springframework.web.servlet.ModelAndView;
 
 import cl.awakelab.ejerciciogrupal.service.CapacitacionService;
 
-// Ejercicio Grupal 6 Módulo 6 
-// 	Integrantes: 
-//		Lino Cortés
-//		Sergio Morales
-// 		Felipe Toro
-//		Pedro urbina
 
 
 @Controller
@@ -24,7 +18,6 @@ public class CapacitacionController {
 	
     @RequestMapping(path = "/listar-capacitaciones", method = RequestMethod.GET)
     public ModelAndView mostrarListarCapacitaciones() {
-    	System.out.println("Esto es una prueba dentro del controller");
-        return new ModelAndView("listar-capacitaciones", "capacitaciones", capacitacionService.getAll());
+    	return new ModelAndView("listar-capacitaciones", "capacitaciones", capacitacionService.getAll());
     }
 }
