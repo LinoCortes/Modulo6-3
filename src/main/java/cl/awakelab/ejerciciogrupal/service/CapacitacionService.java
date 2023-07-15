@@ -20,4 +20,9 @@ public class CapacitacionService {
 	public List<Capacitacion> getAll(){
 		return iCapacitacionRepository.findAll();
 	}
+	
+	public Capacitacion save(Capacitacion capacitacion){
+		return iCapacitacionRepository.save(capacitacion);
+	}
+	
 }

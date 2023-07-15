@@ -8,7 +8,7 @@ import org.springframework.web.servlet.view.RedirectView;
 
 
 
-// Ejercicio Grupal 7.1 Módulo 6 
+// Ejercicio Grupal 9 Módulo 6 
 // 	Integrantes: 
 //		Lino Cortés
 //		Sergio Morales

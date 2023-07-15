@@ -1,12 +1,12 @@
-C:\Users\hr_gi\Desktop\CURSO_JAVA\ejerciciogrupal\src\main\java\cl\awakelab\ejerciciogrupal\controller\HomeController.java
-C:\Users\hr_gi\Desktop\CURSO_JAVA\ejerciciogrupal\src\main\java\cl\awakelab\ejerciciogrupal\modelo\Capacitacion.java
-C:\Users\hr_gi\Desktop\CURSO_JAVA\ejerciciogrupal\src\main\java\cl\awakelab\ejerciciogrupal\service\CapacitacionService.java
-C:\Users\hr_gi\Desktop\CURSO_JAVA\ejerciciogrupal\src\main\java\cl\awakelab\ejerciciogrupal\service\IClienteRepository.java
-C:\Users\hr_gi\Desktop\CURSO_JAVA\ejerciciogrupal\src\main\java\cl\awakelab\ejerciciogrupal\controller\CapacitacionController.java
-C:\Users\hr_gi\Desktop\CURSO_JAVA\ejerciciogrupal\src\main\java\cl\awakelab\ejerciciogrupal\modelo\Cliente.java
-C:\Users\hr_gi\Desktop\CURSO_JAVA\ejerciciogrupal\src\main\java\cl\awakelab\ejerciciogrupal\service\IUsuariosRepository.java
-C:\Users\hr_gi\Desktop\CURSO_JAVA\ejerciciogrupal\src\main\java\cl\awakelab\ejerciciogrupal\service\UsuarioService.java
-C:\Users\hr_gi\Desktop\CURSO_JAVA\ejerciciogrupal\src\main\java\cl\awakelab\ejerciciogrupal\service\ClienteService.java
-C:\Users\hr_gi\Desktop\CURSO_JAVA\ejerciciogrupal\src\main\java\cl\awakelab\ejerciciogrupal\controller\ApiRestController.java
-C:\Users\hr_gi\Desktop\CURSO_JAVA\ejerciciogrupal\src\main\java\cl\awakelab\ejerciciogrupal\modelo\Usuario.java
-C:\Users\hr_gi\Desktop\CURSO_JAVA\ejerciciogrupal\src\main\java\cl\awakelab\ejerciciogrupal\service\ICapacitacionRepository.java
+C:\Users\sergi\OneDrive\Desktop\modulo 4\Modulo6-3\src\main\java\cl\awakelab\ejerciciogrupal\controller\HomeController.java
+C:\Users\sergi\OneDrive\Desktop\modulo 4\Modulo6-3\src\main\java\cl\awakelab\ejerciciogrupal\service\CapacitacionService.java
+C:\Users\sergi\OneDrive\Desktop\modulo 4\Modulo6-3\src\main\java\cl\awakelab\ejerciciogrupal\service\ICapacitacionRepository.java
+C:\Users\sergi\OneDrive\Desktop\modulo 4\Modulo6-3\src\main\java\cl\awakelab\ejerciciogrupal\service\IClienteRepository.java
+C:\Users\sergi\OneDrive\Desktop\modulo 4\Modulo6-3\src\main\java\cl\awakelab\ejerciciogrupal\controller\ApiRestController.java
+C:\Users\sergi\OneDrive\Desktop\modulo 4\Modulo6-3\src\main\java\cl\awakelab\ejerciciogrupal\modelo\Capacitacion.java
+C:\Users\sergi\OneDrive\Desktop\modulo 4\Modulo6-3\src\main\java\cl\awakelab\ejerciciogrupal\modelo\Cliente.java
+C:\Users\sergi\OneDrive\Desktop\modulo 4\Modulo6-3\src\main\java\cl\awakelab\ejerciciogrupal\service\IUsuariosRepository.java
+C:\Users\sergi\OneDrive\Desktop\modulo 4\Modulo6-3\src\main\java\cl\awakelab\ejerciciogrupal\controller\CapacitacionController.java
+C:\Users\sergi\OneDrive\Desktop\modulo 4\Modulo6-3\src\main\java\cl\awakelab\ejerciciogrupal\modelo\Usuario.java
+C:\Users\sergi\OneDrive\Desktop\modulo 4\Modulo6-3\src\main\java\cl\awakelab\ejerciciogrupal\service\UsuarioService.java
+C:\Users\sergi\OneDrive\Desktop\modulo 4\Modulo6-3\src\main\java\cl\awakelab\ejerciciogrupal\service\ClienteService.java
