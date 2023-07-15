@@ -17,14 +17,13 @@ import cl.awakelab.ejerciciogrupal.service.CapacitacionService;
 
 
 @Controller
-public class CapacitacionController {
+public class HomeController {
 
 	@Autowired
 	CapacitacionService capacitacionService;
 	
-    @RequestMapping(path = "/listar-capacitaciones", method = RequestMethod.GET)
-    public ModelAndView mostrarListarCapacitaciones() {
-    	System.out.println("Esto es una prueba dentro del controller");
-        return new ModelAndView("listar-capacitaciones", "capacitaciones", capacitacionService.getAll());
+    @RequestMapping(path = "/", method = RequestMethod.GET)
+    public ModelAndView mostrarLogin() {
+        return new ModelAndView("login");
     }
 }

@@ -1,28 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<bean:beans xmlns:bean="http://www.springframework.org/schema/beans"
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xmlns="http://www.springframework.org/schema/security"
-    xsi:schemaLocation="http://www.springframework.org/schema/beans
+<bean:beans
+	xmlns:bean="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://www.springframework.org/schema/security"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
         http://www.springframework.org/schema/beans/spring-beans.xsd
         http://www.springframework.org/schema/security
         http://www.springframework.org/schema/security/spring-security.xsd">
 
 
-      <http auto-config="true">
-        	<intercept-url pattern="/" access="hasAnyAuthority('ADMIN')"/>
-        	<intercept-url pattern="/listar-capacitaciones" access="hasAnyAuthority('USER')"/>
-        	<intercept-url pattern="/listar-capacitaciones" access="hasAnyAuthority('ADMIN')"/>
-       </http>
+	<http auto-config="true">
+		<intercept-url pattern="/listar-capacitaciones"
+			access="hasAnyAuthority('USER')" />
 
-        <authentication-manager>
-        	<authentication-provider>
-        		<password-encoder hash="bcrypt"/>
-        		<user-service>
-        			<user name="grupo7" authorities="ADMIN" password="$2a$10$br285zcBWkWzay7AB9FVveywJxBWXyCmcYnAnYciSuuxiy/0PtNbG"/>
-        			<user name="pex" authorities="USER" password="$2a$10$uBbgqfcKrxYvtJWhxV1IM.c9i.jjBZl6k2YYmrOyngtfy3X.lY4nq"/>
-        		</user-service>
-        	</authentication-provider>
-        </authentication-manager>
+		<form-login login-page="/login"
+			authentication-failure-url="/error" 
+			username-parameter="username"
+			password-parameter="password" />
+		<logout logout-success-url="/login"/>
+	</http>
 
- </bean:beans>
+	<authentication-manager>
+		<authentication-provider>
+			<password-encoder hash="bcrypt" />
+			<user-service>
+				<user name="grupo7" authorities="ADMIN"
+					password="$2a$10$br285zcBWkWzay7AB9FVveywJxBWXyCmcYnAnYciSuuxiy/0PtNbG" />
+				<user name="pex" authorities="USER"
+					password="$2a$10$uBbgqfcKrxYvtJWhxV1IM.c9i.jjBZl6k2YYmrOyngtfy3X.lY4nq" />
+			</user-service>
+		</authentication-provider>
+	</authentication-manager>
+
+</bean:beans>
