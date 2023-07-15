@@ -1,3 +1,4 @@
+cl\awakelab\ejerciciogrupal\controller\ApiRestController.class
 cl\awakelab\ejerciciogrupal\modelo\Capacitacion.class
 cl\awakelab\ejerciciogrupal\service\ICapacitacionRepository.class
 cl\awakelab\ejerciciogrupal\controller\CapacitacionController.class
