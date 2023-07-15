@@ -24,6 +24,9 @@
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
 </head>
 <body class="hero-section-login">
+	<!-- Navbar -->
+    <jsp:include page="navbar.jsp" />
+    <!-- End Navbar -->
 	<div>
 		<h1 class="text-center text-black col-md-4 mx-auto p-1">Listar
 			Capacitaciones</h1>

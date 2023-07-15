@@ -12,9 +12,8 @@
 
 	<http auto-config="true">
 		<intercept-url pattern="/"	access="permitAll"/>
-		<intercept-url pattern="/listar-capacitaciones"	access="hasAnyAuthority('ADMIN')" />
-		<intercept-url pattern="/listar-capacitaciones"	access="hasAnyAuthority('USER')" />
-
+		<intercept-url pattern="/listar-capacitaciones"	access="hasAnyAuthority('ADMIN', 'USER')" />
+		
 		<form-login login-page="/login"
 			authentication-failure-url="/error" 
 			username-parameter="username"

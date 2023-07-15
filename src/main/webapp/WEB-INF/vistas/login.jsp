@@ -41,7 +41,7 @@
 				<%
 				String error = (String) request.getAttribute("error");
 				if (error != null && error.equals("true")){
-					out.println("<h3 class= 'alert alert-danger'> Error de Autenticacion</h3>");
+					out.println("<h6 class= 'alert alert-danger'> Error de Autenticación</h6>");
 				}
 				%>
 								
