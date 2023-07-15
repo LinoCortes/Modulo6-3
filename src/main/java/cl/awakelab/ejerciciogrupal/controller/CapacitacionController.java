@@ -22,8 +22,9 @@ public class CapacitacionController {
 	@Autowired
 	CapacitacionService capacitacionService;
 	
-    @RequestMapping(path = "/listar-capacitaciones", method = RequestMethod.GET)
+    @RequestMapping(path = "/", method = RequestMethod.GET)
     public ModelAndView mostrarListarCapacitaciones() {
+    	System.out.println("Esto es una prueba dentro del controller");
         return new ModelAndView("listar-capacitaciones", "capacitaciones", capacitacionService.getAll());
     }
 }
