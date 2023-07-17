@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import cl.awakelab.ejerciciogrupal.modelo.Capacitacion;
+import cl.awakelab.ejerciciogrupal.service.repository.ICapacitacionRepository;
 
 @Service
 public class CapacitacionService {

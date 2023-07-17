@@ -8,21 +8,21 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name="cliente")
-public class Cliente  implements Serializable{
+public class Cliente extends Usuario implements Serializable{
 	
 	private static final long serialVersionUID = 1L;
 	
 	
 	
 	@Id
-	private int id_usuario;
+	private int id;
 	private int edad;
 	private String apellidos, rut, telefono, afp, direccion, comuna;
 
-	public Cliente(int id_usuario,String run, String rut, int edad, String nombre, String apellidos, String telefono, String afp,
+	public Cliente(int id, String run, String rut, int edad, String nombre, String apellidos, String telefono, String afp,
 			String direccion, String comuna, String fechaNacimiento) {
 		
-		
+		super(id,nombre,run,fechaNacimiento);
 		this.edad = edad;
 		this.apellidos = apellidos;
 		this.telefono = telefono;
@@ -100,13 +100,4 @@ public class Cliente  implements Serializable{
 				+ apellidos + ", telefono=" + telefono + ", afp=" + afp + ", direccion=" + direccion + ", comuna="
 				+ comuna + "]";
 	}
-
-	public int getId_usuario() {
-		return id_usuario;
-	}
-
-	public void setId_usuario(int id_usuario) {
-		this.id_usuario = id_usuario;
-	}
-
 }

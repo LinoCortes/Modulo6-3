@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import cl.awakelab.ejerciciogrupal.modelo.Cliente;
+import cl.awakelab.ejerciciogrupal.service.repository.IClienteRepository;
 
 @Service
 public class ClienteService {

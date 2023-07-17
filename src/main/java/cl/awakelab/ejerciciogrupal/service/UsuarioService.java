@@ -3,9 +3,11 @@ package cl.awakelab.ejerciciogrupal.service;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Service;
 
 import cl.awakelab.ejerciciogrupal.modelo.Usuario;
+import cl.awakelab.ejerciciogrupal.service.repository.IUsuariosRepository;
 
 @Service
 public class UsuarioService {
@@ -16,10 +18,8 @@ public class UsuarioService {
 	public UsuarioService() {
 		
 	}
-	
+	@Query("Join")
 	public List<Usuario> getAll(){
 		return iusuariosRepository.findAll();
 	}
-	
-
 }

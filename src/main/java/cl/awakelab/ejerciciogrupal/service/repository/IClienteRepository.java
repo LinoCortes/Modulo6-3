@@ -1,4 +1,4 @@
-package cl.awakelab.ejerciciogrupal.service;
+package cl.awakelab.ejerciciogrupal.service.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
