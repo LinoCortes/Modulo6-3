@@ -15,14 +15,14 @@ import cl.awakelab.ejerciciogrupal.service.repository.IProfesionalRepository;
 @Service
 public class ProfesionalService {
 	
+	@Autowired
 	private IProfesionalRepository iProfesionalRepository;
 	
-	@Autowired
 	public ProfesionalService(IProfesionalRepository iProfesionalRepository) {
 		this.iProfesionalRepository=iProfesionalRepository;
 	}
 	
-	public List<Profesional> getAll(){
+	List<Profesional> getAll(){
 		System.out.println(iProfesionalRepository.findAll());
 		return iProfesionalRepository.findAll();
 	}

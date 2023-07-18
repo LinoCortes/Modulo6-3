@@ -24,8 +24,9 @@ public class HomeController {
 	@RequestMapping(path = "/" )
     public RedirectView mostrarHome() {
 		RedirectView redirectView = new RedirectView();
-        redirectView.setUrl("/ejerciciogrupal/listar-capacitaciones");
-        return redirectView;
+		redirectView.setUrl("/ejerciciogrupal/listar-capacitaciones");
+    	System.out.println("Prueba dentro del controlador de Home");
+		return redirectView;
     }
 	
   

@@ -1,5 +1,7 @@
 package cl.awakelab.ejerciciogrupal.modelo;
 
+import java.io.Serializable;
+
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -14,15 +16,13 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name="profesional")
-public class Profesional {
+public class Profesional extends Usuario implements Serializable{
 	
 	private static final long serialVersionUID = 1L;
 	@Id
 	@Column(name="id_profesional")
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
-	@OneToOne
-    @JoinColumn(name = "id")
-	private Usuario usuario;
 	private String titulo;
 	@Column(name="fecha_ingreso")
 	private String fechaIngreso;

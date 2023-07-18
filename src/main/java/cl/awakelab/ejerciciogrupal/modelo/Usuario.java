@@ -18,13 +18,10 @@ public class Usuario implements Serializable{
 	
 	private static final long serialVersionUID = 1L;
 	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
-	@Column(name="id")
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
 	private String nombre, run;
-	@OneToOne(mappedBy = "usuario")
-	@PrimaryKeyJoinColumn
-	private Profesional profesional;
+	@Column(name="fecha_nacimiento")
 	private String fechaNacimiento;
 	
 	public Usuario() {
@@ -71,7 +68,6 @@ public class Usuario implements Serializable{
 		this.fechaNacimiento = fechaNacimiento;
 	}
 	
-	//Sobreescribe el metodo toString
 	@Override
 	public String toString() {
 		return "Usuario [id=" + id + ", nombre=" + nombre + ", run=" + run + ", fechaNacimiento=" + fechaNacimiento

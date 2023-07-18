@@ -18,6 +18,7 @@ public class CapacitacionController {
 	
     @RequestMapping(path = "/listar-capacitaciones", method = RequestMethod.GET)
     public ModelAndView mostrarListarCapacitaciones() {
+    	System.out.println("Prueba dentro del controlador de capacitaciones");
     	return new ModelAndView("listar-capacitaciones", "capacitaciones", capacitacionService.getAll());
     }
 }
