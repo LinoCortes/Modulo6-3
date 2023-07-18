@@ -15,6 +15,7 @@ public class Cliente extends Usuario implements Serializable{
 	
 	
 	@Id
+	
 	private int id;
 	private int edad;
 	private String apellidos, rut, telefono, afp, direccion, comuna;

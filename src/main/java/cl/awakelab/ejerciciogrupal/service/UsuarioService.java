@@ -18,7 +18,6 @@ public class UsuarioService {
 	public UsuarioService() {
 		
 	}
-	@Query("Join")
 	public List<Usuario> getAll(){
 		return iusuariosRepository.findAll();
 	}

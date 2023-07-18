@@ -7,17 +7,18 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name="profesional")
-public class Profesional{
+public class Profesional extends Usuario{
 	
 	private static final long serialVersionUID = 1L;
 	@Id
-	int id_usuario;
+	@Column(name="id_profesional")
+	int id;
 	String titulo;
 	@Column(name="fecha_ingreso")
 	String fechaIngreso;
 
 	public Profesional(int id_usuario,String nombre,String run, String fechaNacimiento,String titulo, String fechaIngreso) {
-//		super(id,nombre,run,fechaNacimiento);
+		super(id_usuario,nombre,run,fechaNacimiento);
 		this.titulo = titulo;
 		this.fechaIngreso = fechaIngreso;
 	}
@@ -32,13 +33,13 @@ public class Profesional{
 		return titulo;
 	}
 
-	public int getId_usuario() {
-		return id_usuario;
+	public int getId() {
+		return id;
 	}
 
 
-	public void setId_usuario(int id_usuario) {
-		this.id_usuario = id_usuario;
+	public void setId(int id) {
+		this.id = id;
 	}
 
 

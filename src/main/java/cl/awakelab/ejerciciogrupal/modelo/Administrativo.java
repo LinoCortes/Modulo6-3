@@ -1,17 +1,24 @@
 package cl.awakelab.ejerciciogrupal.modelo;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 import javax.persistence.Table;
 
-@Table
-@Entity(name="administrativo")
+
+@Entity
+@Table(name="administrativo")
 public class Administrativo extends Usuario{
 	
-	/**
-	 * 
-	 */
 	private static final long serialVersionUID = 1L;
-	String area, experienciaPrevia;
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	@Column(name="id_administrativo")
+	int id;
+	String area;
+	String experienciaPrevia;
 	
 	public Administrativo() {
 		
