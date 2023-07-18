@@ -1,24 +1,34 @@
 package cl.awakelab.ejerciciogrupal.modelo;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.MapsId;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 @Entity
 @Table(name="profesional")
-public class Profesional extends Usuario{
+public class Profesional {
 	
 	private static final long serialVersionUID = 1L;
 	@Id
 	@Column(name="id_profesional")
-	int id;
-	String titulo;
+	private int id;
+	@OneToOne
+    @JoinColumn(name = "id")
+	private Usuario usuario;
+	private String titulo;
 	@Column(name="fecha_ingreso")
-	String fechaIngreso;
+	private String fechaIngreso;
 
-	public Profesional(int id_usuario,String nombre,String run, String fechaNacimiento,String titulo, String fechaIngreso) {
-		super(id_usuario,nombre,run,fechaNacimiento);
+	public Profesional(int id,String nombre,String run, String fechaNacimiento,String titulo, String fechaIngreso) {
+		//super(id,nombre,run,fechaNacimiento);
 		this.titulo = titulo;
 		this.fechaIngreso = fechaIngreso;
 	}

@@ -9,7 +9,6 @@ import javax.persistence.Table;
 
 
 @Entity
-@Table(name="administrativo")
 public class Administrativo extends Usuario{
 	
 	private static final long serialVersionUID = 1L;

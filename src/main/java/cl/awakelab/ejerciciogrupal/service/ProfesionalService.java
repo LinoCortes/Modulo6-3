@@ -14,14 +14,16 @@ import cl.awakelab.ejerciciogrupal.service.repository.IProfesionalRepository;
 
 @Service
 public class ProfesionalService {
-	@Autowired
+	
 	private IProfesionalRepository iProfesionalRepository;
 	
-	public ProfesionalService() {
-		
+	@Autowired
+	public ProfesionalService(IProfesionalRepository iProfesionalRepository) {
+		this.iProfesionalRepository=iProfesionalRepository;
 	}
-	@Query("SELECT usuario.id, usuario.nombre, usuario.run, usuario.fecha_nacimiento, profesional.titulo, profesional.fecha_ingreso FROM profesional INNER JOIN usuario ON usuario.id=profesional.id_usuario;")
+	
 	public List<Profesional> getAll(){
+		System.out.println(iProfesionalRepository.findAll());
 		return iProfesionalRepository.findAll();
 	}
 }

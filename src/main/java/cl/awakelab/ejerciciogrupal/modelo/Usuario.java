@@ -7,22 +7,24 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.Inheritance;
-import javax.persistence.InheritanceType;
+import javax.persistence.MappedSuperclass;
+import javax.persistence.OneToOne;
+import javax.persistence.PrimaryKeyJoinColumn;
 import javax.persistence.Table;
 
 @Entity
-@Inheritance(strategy = InheritanceType.TABLE_PER_CLASS)
+@Table(name="usuario")
 public class Usuario implements Serializable{
-	
-	
 	
 	private static final long serialVersionUID = 1L;
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
+	@Column(name="id")
 	private int id;
 	private String nombre, run;
-	@Column(name="fecha_nacimiento")
+	@OneToOne(mappedBy = "usuario")
+	@PrimaryKeyJoinColumn
+	private Profesional profesional;
 	private String fechaNacimiento;
 	
 	public Usuario() {

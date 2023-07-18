@@ -21,6 +21,7 @@ public class UsuarioController {
 	
 	@RequestMapping(path = "/listar-usuarios", method = RequestMethod.GET)
     public ModelAndView mostrarListarUsuarios() {
-		System.out.println("Prueba dentro del controller de usuarios");
+		System.out.println(profesionalService.getAll());
+		
 		return new ModelAndView("listar-usuarios", "profesionales", profesionalService.getAll());}
 }
