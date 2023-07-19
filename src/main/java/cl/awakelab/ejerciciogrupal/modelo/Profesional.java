@@ -16,23 +16,73 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name="profesional")
-public class Profesional extends Usuario implements Serializable{
+public class Profesional implements Serializable{
 	
 	private static final long serialVersionUID = 1L;
 	@Id
-	@Column(name="id_profesional")
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private int id;
+	int id_profesional;
+	private String nombre;
+	private String run;
+	private String fechaNacimiento;
 	private String titulo;
-	@Column(name="fecha_ingreso")
 	private String fechaIngreso;
 
-	public Profesional(int id,String nombre,String run, String fechaNacimiento,String titulo, String fechaIngreso) {
-		//super(id,nombre,run,fechaNacimiento);
+	public Profesional(int id_profesional ,String nombre, String run, String fechaNacimiento,
+			String titulo, String fechaIngreso) {
+		this.id_profesional=id_profesional;
+		this.nombre = nombre;
+		this.run = run;
+		this.fechaNacimiento = fechaNacimiento;
 		this.titulo = titulo;
 		this.fechaIngreso = fechaIngreso;
 	}
 	
+
+	
+
+	public int getId_profesional() {
+		return id_profesional;
+	}
+
+
+
+
+	public void setId_profesional(int id_profesional) {
+		this.id_profesional = id_profesional;
+	}
+
+
+
+
+	public String getNombre() {
+		return nombre;
+	}
+
+
+	public void setNombre(String nombre) {
+		this.nombre = nombre;
+	}
+
+
+	public String getRun() {
+		return run;
+	}
+
+
+	public void setRun(String run) {
+		this.run = run;
+	}
+
+
+	public String getFechaNacimiento() {
+		return fechaNacimiento;
+	}
+
+
+	public void setFechaNacimiento(String fechaNacimiento) {
+		this.fechaNacimiento = fechaNacimiento;
+	}
+
 
 	public Profesional() {
 		
@@ -43,14 +93,7 @@ public class Profesional extends Usuario implements Serializable{
 		return titulo;
 	}
 
-	public int getId() {
-		return id;
-	}
 
-
-	public void setId(int id) {
-		this.id = id;
-	}
 
 
 	public void setTitulo(String titulo) {

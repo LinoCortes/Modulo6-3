@@ -7,11 +7,10 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
-
 import cl.awakelab.ejerciciogrupal.modelo.Capacitacion;
-import cl.awakelab.ejerciciogrupal.modelo.Cliente;
+import cl.awakelab.ejerciciogrupal.modelo.Profesional;
 import cl.awakelab.ejerciciogrupal.service.CapacitacionService;
-import cl.awakelab.ejerciciogrupal.service.ClienteService;
+import cl.awakelab.ejerciciogrupal.service.ProfesionalService;
 
 
 @RestController
@@ -19,15 +18,18 @@ public class ApiRestController {
   
       
       @Autowired
-      private ClienteService clienteService;
+      private ProfesionalService profesionalService;
       
       @Autowired
       private CapacitacionService capacitacionService;
       
-      @RequestMapping(value="/api/clientes", headers = "Accept=application/json")
-      public List<Cliente> getClientes() {
-        return clienteService.getAll();
+      
+     
+     @RequestMapping(value="/api/profesional", headers = "Accept=application/json")
+      public List<Profesional> getProfesional() {
+        return profesionalService.getAll();
       }
+      
       
       @RequestMapping(value="/api/capacitacion", headers = "Accept=application/json" )
       public List<Capacitacion> getCapacitaciones() {

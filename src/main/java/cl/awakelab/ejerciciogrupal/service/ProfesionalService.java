@@ -18,12 +18,11 @@ public class ProfesionalService {
 	@Autowired
 	private IProfesionalRepository iProfesionalRepository;
 	
-	public ProfesionalService(IProfesionalRepository iProfesionalRepository) {
-		this.iProfesionalRepository=iProfesionalRepository;
+	public ProfesionalService() {
+		
 	}
 	
-	List<Profesional> getAll(){
-		System.out.println(iProfesionalRepository.findAll());
+	public List<Profesional> getAll(){
 		return iProfesionalRepository.findAll();
 	}
 }

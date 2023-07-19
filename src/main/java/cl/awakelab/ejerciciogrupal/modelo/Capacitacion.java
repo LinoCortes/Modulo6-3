@@ -9,19 +9,15 @@ import javax.persistence.Table;
 @Entity
 @Table(name="capacitaciones")
 public class Capacitacion implements Serializable{
-	/**
-	 * 
-	 */
+	
 	private static final long serialVersionUID = 1L;
 	@Id
-	int identificador;
-	int duracion,cantidadAsistentes,id;
+	int id;
+	int duracion,cantidadAsistentes,identificador;
 	String tematica, dia,hora,lugar;
 	String rutCliente;
 	
-	public Capacitacion() {
-	    
-	}	
+		
 	
 	public Capacitacion(int id,int identificador, int duracion, int cantidadAsistentes, String rutCliente,
 			String tematica, String dia, String hora, String lugar) {
@@ -35,6 +31,14 @@ public class Capacitacion implements Serializable{
 		    this.dia = dia;
 		    this.hora = hora;		      
     }
+	
+	public Capacitacion() {
+	    
+	}
+	
+	
+	
+	
 	
 	public int getId() {
 		return id;

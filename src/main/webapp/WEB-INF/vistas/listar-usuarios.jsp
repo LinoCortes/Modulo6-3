@@ -34,9 +34,7 @@
 						</select>
 					</div>
 					<div class="col-6 offset-3">
-						<jsp:include page="tablas/tabla-administrativo.jsp" />
 						<jsp:include page="tablas/tabla-profesional.jsp" />
-						<jsp:include page="tablas/tabla-cliente.jsp" />
 					</div>
 				</div>
 			</div>

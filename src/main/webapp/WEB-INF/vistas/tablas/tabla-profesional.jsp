@@ -18,7 +18,7 @@
 	<tbody class="table-group-divider">
 		<c:forEach var = "s" items = "${profesionales}">
 	     <tr>
-			<td><c:out value="${s.getId()}"></c:out></td>
+			<td><c:out value="${s.getId_profesional()}"></c:out></td>
 			<td><c:out value="${s.getNombre()}"></c:out></td>
 			<td><c:out value="${s.getRun()}"></c:out></td>
 			<td><c:out value="${s.getFechaNacimiento()}"></c:out></td>

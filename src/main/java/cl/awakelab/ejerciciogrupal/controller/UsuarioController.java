@@ -22,6 +22,5 @@ public class UsuarioController {
 	@RequestMapping(path = "/listar-usuarios", method = RequestMethod.GET)
     public ModelAndView mostrarListarUsuarios() {
 		System.out.println(profesionalService.getAll());
-		
 		return new ModelAndView("listar-usuarios", "profesionales", profesionalService.getAll());}
 }
